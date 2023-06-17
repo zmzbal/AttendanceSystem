@@ -6,6 +6,7 @@ class Student: public Person {
 protected:
     std::string student_class;
     std::string major;
+
 public:
     Student(unsigned id, const std::string& name,
         const std::string& gender, const std::string password,
@@ -16,7 +17,7 @@ public:
 
     Student& operator=(const Student& other);
 
-    virtual ~Student();
+    virtual ~Student() noexcept;
 
     const std::string& getClass() const;
     const std::string& getMajor() const;

@@ -9,12 +9,23 @@ protected:
     std::string gender;
     std::string passwd;
     unsigned age;
+
+private:
+
+    static void validateAge(unsigned int age) {
+        if (age <= 5 || age >= 100) {
+            throw std::invalid_argument("Invalid age.");
+        }
+    };
+
 public:
     // Parameterized constructor
     Person(unsigned id, const std::string& name,
            const std::string& gender, const std::string& password,
            unsigned age)
-        : id(id), name(name), gender(gender), passwd(password), age(age) {}
+        : id(id), name(name), gender(gender), passwd(password), age(age) {
+        validateAge(age);
+    }
 
     // Copy constructor
     Person(const Person& other)

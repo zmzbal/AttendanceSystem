@@ -19,7 +19,7 @@ public:
 
     Teacher& operator=(const Teacher& other);
     
-    virtual ~Teacher();
+    virtual ~Teacher() noexcept;
 
     const std::string& getPosition() const;
 
