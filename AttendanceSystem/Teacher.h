@@ -7,10 +7,13 @@ class Teacher: public Person {
 
 protected:
     std::string position;
+    std::string faculty;
 
 public:
-    Teacher(const std::string& id, const std::string& name, 
-        const std::string& gender, const std::string& position);
+    Teacher(unsigned id, const std::string& name,
+            const std::string& gender, const std::string& password,
+            unsigned age, const std::string& position,
+            const std::string& faculty);
 
     Teacher(const Teacher& other);
 
@@ -20,8 +23,11 @@ public:
 
     const std::string& getPosition() const;
 
+    const std::string& getFaculty() const;
+
     void setPosition(const std::string& newPosition);
 
+    void setFaculty(const std::string& newFaculty);
 
 };
 
