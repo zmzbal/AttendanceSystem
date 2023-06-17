@@ -7,7 +7,7 @@ class Person {
 protected:
     std::string name;
     std::string gender;
-    std::string id;
+    const std::string id;
 
 public:
     // Parameterized constructor
@@ -19,9 +19,9 @@ public:
         : id(other.id), name(other.name), gender(other.gender) {}
 
     // Copy assignment operator
-    Person& operator=(const Person& other) {
+    Person& operator=(const Person& other){
         if (this != &other) {
-            id = other.id;
+            //id = other.id;
             name = other.name;
             gender = other.gender;
         }
@@ -39,7 +39,7 @@ public:
     // Mutator functions
     void setName(const std::string& newName) { name = newName; }
     void setGender(const std::string& newGender) { gender = newGender; }
-    void setId(const std::string& newId) { id = newId; }
+    //void setId(const std::string& newId) { id = newId; }
 
 };
 
