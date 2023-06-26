@@ -29,5 +29,4 @@ public:
 
 };
 
-
 #endif //ATTENDANCESYSTEM_ATTENDANCE_H

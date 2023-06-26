@@ -4,7 +4,6 @@
 #define TEACHER_H
 
 class Teacher: public Person {
-
 protected:
     std::string position;
     std::string faculty;
